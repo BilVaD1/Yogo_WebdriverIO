@@ -67,11 +67,11 @@ describe('My Home Page', () => {
     });
 
     it('Check the Total Price', async () => {
-        let firefox = process.env.firefox
+        let new_Version = process.env.new_Version
 
-        firefox ? await HomePage.addItemToCart_Firefox(5) : await HomePage.addItemToCart(5)
+        new_Version ? await HomePage.addItemToCart_Firefox(5) : await HomePage.addItemToCart(5)
         await HomePage.closeCart()
-        firefox ? await HomePage.addItemToCart_Firefox(1) : await HomePage.addItemToCart(1)
+        new_Version ? await HomePage.addItemToCart_Firefox(1) : await HomePage.addItemToCart(1)
         await HomePage.closeCart()
         const itemPriceOne = +(await HomePage.getPriceOfItem(1)).replace(/[^0-9,.]/g,"")
         const itemPriceFifth = +(await HomePage.getPriceOfItem(5)).replace(/[^0-9,.]/g,"")
