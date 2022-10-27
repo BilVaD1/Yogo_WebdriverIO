@@ -1,0 +1,19 @@
+{
+    "name": "webdriverio-tests",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@wdio/cli": "^7.25.1",
+        "@wdio/local-runner": "^7.25.1",
+        "@wdio/mocha-framework": "^7.25.1",
+        "@wdio/selenium-standalone-service": "^7.25.1",
+        "@wdio/spec-reporter": "^7.25.1",
+        "cross-env": "^7.0.3",
+        "moment": "^2.29.4",
+        "wdio-html-nice-reporter": "^8.0.5"
+    },
+    "scripts": {
+        "wdio": "wdio run wdio.conf.js",
+        "wdio_firefox": "cross-env firefox=true wdio run wdio.conf.js"
+    }
+}
